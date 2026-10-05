@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <h1>💻 Programación Orientada a Objetos en PHP</h1>
+        <h1>💻 Programación Orientada a Objetos en PHP version 8.4</h1>
         <p>Unidad Educativa Fiscomisional "María Auxiliadora" | 3ro Informática "A"</p>
     </header>
 
