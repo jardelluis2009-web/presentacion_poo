@@ -1,0 +1,159 @@
+/* ==========================================================================
+   ESTILOS VIBRANTES, COLORIDOS Y MENÚ FIJO
+   ========================================================================== */
+
+/* Desplazamiento suave al hacer clic en el menú */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #4f46e5;
+    --primary-dark: #3730a3;
+    --bg-body: #f8fafc;
+}
+
+body {
+    background: linear-gradient(180deg, #e0e7ff 0%, #f1f5f9 300px, #f8fafc 100%) !important;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #0f172a;
+}
+
+/* ENCABEZADO IMPACTANTE */
+.hero-header {
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 50%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    padding: 3rem 1rem !important;
+    box-shadow: 0 10px 25px rgba(67, 56, 202, 0.3);
+}
+
+.hero-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* MENÚ FIJO EN LA PARTE SUPERIOR (STICKY NAVBAR) */
+.sticky-nav-container {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+}
+
+.nav-pills {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 16px !important;
+    padding: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+.nav-pills .nav-link {
+    color: #475569 !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    padding: 10px 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #e0e7ff !important;
+    color: #4338ca !important;
+}
+
+.nav-pills .nav-link.active {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4) !important;
+}
+
+/* SECCIONES Y TARJETAS COLORIDAS CON SOMBRAS */
+.card-custom {
+    border: none !important;
+    border-radius: 20px !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+    background: #ffffff !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem !important;
+}
+
+.card-custom:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-header-custom {
+    border-left: 6px solid #4f46e5;
+    padding-left: 14px;
+    font-weight: 800;
+}
+
+/* CAJAS DE CÓDIGO ESTILO EDITOR MODERNO CON BORDE BRILLANTE */
+pre, .code-container {
+    background-color: #090d16 !important;
+    color: #38bdf8 !important;
+    border-radius: 12px !important;
+    padding: 18px !important;
+    font-family: 'Consolas', 'Fira Code', monospace !important;
+    font-size: 0.92rem;
+    border: 1px solid #1e293b;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* TARJETAS DE LOS 4 PILARES CON BORDES DE COLORES VIVOS */
+.pilar-card {
+    border-radius: 16px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f8fafc;
+}
+
+.pilar-card:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+}
+
+.pilar-1 { border: 2px solid #ef4444 !important; border-top: 6px solid #ef4444 !important; }
+.pilar-2 { border: 2px solid #3b82f6 !important; border-top: 6px solid #3b82f6 !important; }
+.pilar-3 { border: 2px solid #10b981 !important; border-top: 6px solid #10b981 !important; }
+.pilar-4 { border: 2px solid #f59e0b !important; border-top: 6px solid #f59e0b !important; }
+
+/* SECCIÓN CUESTIONARIO REINVENTADA Y LLAMATIVA */
+.cuestionario-box {
+    background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%) !important;
+    border: 2px solid #facc15 !important;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(234, 179, 8, 0.15);
+}
+
+.pregunta-item {
+    background-color: #ffffff !important;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 16px;
+    border-left: 6px solid #eab308 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn-cuestionario {
+    background: linear-gradient(135deg, #0284c7, #2563eb) !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    padding: 14px !important;
+    border-radius: 12px !important;
+    width: 100%;
+    border: none;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-cuestionario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(2, 132, 199, 0.5);
+}
+
+footer {
+    background: #0f172a !important;
+    color: #94a3b8 !important;
+}
