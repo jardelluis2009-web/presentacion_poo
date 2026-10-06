@@ -63,6 +63,11 @@ section {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+#practica {
+    text-align: left;
 }
 
 h2 {
@@ -107,6 +112,8 @@ ul {
     border-radius: 8px;
     border: 1px solid #ddd;
     max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 form {
@@ -157,6 +164,7 @@ button:hover {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #ffeeba;
+    text-align: left;
 }
 
 .pregunta-bloque {

@@ -179,7 +179,6 @@ class Estudiante {
         </section>
 
         <!-- SECCIÓN 5: CUESTIONARIO CON TU FORMULARIO ORIGINAL -->
-         <center>
         <section id="practica">
             <h2>📝 Cuestionario de Programación Orientada a Objetos</h2>
             <p>Selecciona una respuesta para cada pregunta. Cada respuesta correcta vale <strong>2 puntos</strong>; al finalizar verás tu puntuación sobre 10.</p>
@@ -277,7 +276,6 @@ class Estudiante {
                 <?php endif; ?>
             </div>
         </section>
-         </center>
     </main>
 
     <footer>
