@@ -56,7 +56,7 @@ class Estudiante {
             </article>
 
             <article>
-                <h3>3. Objeto</h3>
+                <h3>2. Objeto</h3>
                 <p>Es la entidad creada a partir de una clase mediante la palabra clave <code>new</code>.</p>
                 <pre><code>&lt;?php
 $estudiante1 = new Estudiante();
