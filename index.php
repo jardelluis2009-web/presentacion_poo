@@ -164,17 +164,17 @@ class Estudiante {
 
                     <label>
                         Nota 1:
-                        <input type="number" step="0.1" min="0" max="10" name="nota1" value="<?php echo htmlspecialchars((string) $nota1, ENT_QUOTES, 'UTF-8'); ?>" required>
+                        <input type="number" step="any" min="0" max="10" name="nota1" value="<?php echo htmlspecialchars((string) $nota1, ENT_QUOTES, 'UTF-8'); ?>" required>
                     </label>
 
                     <label>
                         Nota 2:
-                        <input type="number" step="0.1" min="0" max="10" name="nota2" value="<?php echo htmlspecialchars((string) $nota2, ENT_QUOTES, 'UTF-8'); ?>" required>
+                        <input type="number" step="any" min="0" max="10" name="nota2" value="<?php echo htmlspecialchars((string) $nota2, ENT_QUOTES, 'UTF-8'); ?>" required>
                     </label>
 
                     <label>
                         Nota 3:
-                        <input type="number" step="0.1" min="0" max="10" name="nota3" value="<?php echo htmlspecialchars((string) $nota3, ENT_QUOTES, 'UTF-8'); ?>" required>
+                        <input type="number" step="any" min="0" max="10" name="nota3" value="<?php echo htmlspecialchars((string) $nota3, ENT_QUOTES, 'UTF-8'); ?>" required>
                     </label>
 
                     <button type="submit" name="calcular" value="1">Calcular promedio</button>
