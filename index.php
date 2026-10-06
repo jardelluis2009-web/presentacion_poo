@@ -32,7 +32,7 @@
             <h3>¿Para qué se utiliza?</h3>
             <p>Se utiliza para desarrollar aplicaciones más robustas y escalables. En PHP, la POO nos ayuda a dividir proyectos grandes en piezas independientes, facilitando el trabajo colaborativo y la detección de errores.</p>
 
-            <h3>✨ Ventajas de trabajar con objetos en PHP:</h3>
+            <h3> Ventajas de trabajar con objetos en PHP:</h3>
             <ul>
                 <li><strong>Reutilización de código:</strong> Una clase puede usarse múltiples veces.</li>
                 <li><strong>Orden y limpieza:</strong> El código queda mucho más organizado y legible.</li>
