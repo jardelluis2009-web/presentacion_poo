@@ -128,20 +128,30 @@ article {
 
 pre {
     background: #0f172a;
-    color: #e2e8f0;
+    color: #f8fafc;
     padding: 18px 20px;
     border-radius: 12px;
     overflow-x: auto;
     margin-top: 12px;
     border: 1px solid #1e293b;
+    box-shadow: 0 10px 18px rgba(15, 23, 42, 0.2);
+}
+
+pre code {
+    background: transparent;
+    color: #f8fafc;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
 }
 
 code {
-    background: rgba(43, 108, 246, 0.08);
-    color: var(--primary-dark);
-    border-radius: 4px;
-    padding: 2px 6px;
+    background: #eaf1ff;
+    color: #10213d;
+    border-radius: 6px;
+    padding: 3px 7px;
     font-size: 0.95em;
+    border: 1px solid #cfe0ff;
 }
 
 .pilar-grid {
