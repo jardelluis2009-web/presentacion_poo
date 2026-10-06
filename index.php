@@ -127,54 +127,66 @@ class Estudiante {
         <!-- SECCIÓN 4: EJEMPLO PRÁCTICO POO -->
         <section id="ejemplo-practico">
             <h2>Ejemplo Práctico en PHP</h2>
-            <p>Demostración simple de una clase PHP con sus atributos, constructor y métodos:</p>
+            <p>Registra el nombre, apellido y tres calificaciones para calcular el promedio y saber si el estudiante está aprobado o reprobado.</p>
 
             <?php
-            // Definición de la Clase Estudiante
-            class Estudiante {
-                public $nombre;
-                public $nota1;
-                public $nota2;
+            $nombre = '';
+            $apellido = '';
+            $nota1 = '';
+            $nota2 = '';
+            $nota3 = '';
+            $promedio = null;
+            $estado = '';
 
-                public function __construct($nombre, $nota1, $nota2) {
-                    $this->nombre =$nombre;
-                    $this->nota1 = $nota1;
-                    $this->nota2 = $nota2;
-                }
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['calcular'])) {
+                $nombre = trim((string) ($_POST['nombre'] ?? ''));
+                $apellido = trim((string) ($_POST['apellido'] ?? ''));
+                $nota1 = isset($_POST['nota1']) ? (float) $_POST['nota1'] : 0;
+                $nota2 = isset($_POST['nota2']) ? (float) $_POST['nota2'] : 0;
+                $nota3 = isset($_POST['nota3']) ? (float) $_POST['nota3'] : 0;
 
-                public function calcularPromedio() {
-                    return ($this->nota1 +$this->nota2) / 2;
-                }
-
-                public function obtenerEstado() {
-                    $promedio =$this->calcularPromedio();
-                    if ($promedio >= 7) {
-                        return "Aprobado";
-                    } else {
-                        return "Remedial";
-                    }
-                }
+                $promedio = ($nota1 + $nota2 + $nota3) / 3;
+                $estado = $promedio >= 7 ? 'Aprobado' : 'Reprobado';
             }
-
-            // Crear 2 Objetos
-            $alumno1 = new Estudiante("Jardel Canga", 8.5, 9.0);
-            $alumno2 = new Estudiante("Daniela Ganchozo", 6.0, 6.5);
             ?>
 
-            <div class="demostramcion-poo">
-                <h3>Resultados generados por la clase PHP:</h3>
-                <ul>
-                    <li>
-                        <strong>Estudiante:</strong> <?php echo $alumno1->nombre; ?> | 
-                        <strong>Promedio:</strong> <?php echo $alumno1->calcularPromedio(); ?> | 
-                        <strong>Estado:</strong> <?php echo $alumno1->obtenerEstado(); ?>
-                    </li>
-                    <li>
-                        <strong>Estudiante:</strong> <?php echo $alumno2->nombre; ?> | 
-                        <strong>Promedio:</strong> <?php echo $alumno2->calcularPromedio(); ?> | 
-                        <strong>Estado:</strong> <?php echo $alumno2->obtenerEstado(); ?>
-                    </li>
-                </ul>
+            <div class="form-container ejemplo-form">
+                <form action="#ejemplo-practico" method="POST">
+                    <label>
+                        Nombre:
+                        <input type="text" name="nombre" value="<?php echo htmlspecialchars($nombre, ENT_QUOTES, 'UTF-8'); ?>" required>
+                    </label>
+
+                    <label>
+                        Apellido:
+                        <input type="text" name="apellido" value="<?php echo htmlspecialchars($apellido, ENT_QUOTES, 'UTF-8'); ?>" required>
+                    </label>
+
+                    <label>
+                        Nota 1:
+                        <input type="number" step="0.1" min="0" max="10" name="nota1" value="<?php echo htmlspecialchars((string) $nota1, ENT_QUOTES, 'UTF-8'); ?>" required>
+                    </label>
+
+                    <label>
+                        Nota 2:
+                        <input type="number" step="0.1" min="0" max="10" name="nota2" value="<?php echo htmlspecialchars((string) $nota2, ENT_QUOTES, 'UTF-8'); ?>" required>
+                    </label>
+
+                    <label>
+                        Nota 3:
+                        <input type="number" step="0.1" min="0" max="10" name="nota3" value="<?php echo htmlspecialchars((string) $nota3, ENT_QUOTES, 'UTF-8'); ?>" required>
+                    </label>
+
+                    <button type="submit" name="calcular" value="1">Calcular promedio</button>
+                </form>
+
+                <?php if ($promedio !== null): ?>
+                    <div class="resultado" role="status" aria-live="polite">
+                        <strong>Estudiante:</strong> <?php echo htmlspecialchars($nombre . ' ' . $apellido, ENT_QUOTES, 'UTF-8'); ?><br>
+                        <strong>Promedio:</strong> <?php echo number_format($promedio, 2); ?><br>
+                        <strong>Estado:</strong> <?php echo $estado; ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </section>
 
