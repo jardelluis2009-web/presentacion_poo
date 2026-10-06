@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <h1>💻 Programación Orientada a Objetos en PHP version 8.4</h1>
+        <h1>Programación Orientada a Objetos en PHP version 8.4</h1>
         <p>Unidad Educativa Fiscomisional "María Auxiliadora" | 3ro Informática "A"</p>
     </header>
 
@@ -26,7 +26,7 @@
     <main>
         <!-- SECCIÓN 1: TEORÍA -->
         <section id="teoria">
-            <h2>🚀 ¿Qué es la Programación Orientada a Objetos?</h2>
+            <h2>¿Qué es la Programación Orientada a Objetos?</h2>
             <p>La Programación Orientada a Objetos (POO) es un paradigma de programación que nos permite organizar el código agrupando comportamientos y datos similares dentro de "objetos". En lugar de un código lineal lleno de funciones sueltas, estructuramos nuestro programa imitando el mundo real.</p>
             
             <h3>¿Para qué se utiliza?</h3>
@@ -43,7 +43,7 @@
 
         <!-- SECCIÓN 2: ELEMENTOS PRINCIPALES CON EJEMPLOS DE CÓDIGO -->
         <section id="elementos">
-            <h2>⚙️ Elementos Principales de la POO (Ejemplos en PHP)</h2>
+            <h2>Elementos Principales de la POO (Ejemplos en PHP)</h2>
             
             <article>
                 <h3>1. Clase</h3>
@@ -103,22 +103,22 @@ class Estudiante {
 
         <!-- SECCIÓN 3: PILARES -->
         <section id="pilares">
-            <h2>🏛️ Los 4 Pilares de la POO</h2>
+            <h2>Los 4 Pilares de la POO</h2>
             <div class="pilar-grid">
                 <div class="pilar-card">
-                    <h3>1. Encapsulamiento 🔒</h3>
+                    <h3>1. Encapsulamiento</h3>
                     <p>Protege los datos restringiendo el acceso directo mediante la palabra clave <code>private</code>.</p>
                 </div>
                 <div class="pilar-card">
-                    <h3>2. Herencia 🧬</h3>
+                    <h3>2. Herencia</h3>
                     <p>Permite a una clase hija heredar los atributos y métodos de una clase padre usando <code>extends</code>.</p>
                 </div>
                 <div class="pilar-card">
-                    <h3>3. Polimorfismo 🎭</h3>
+                    <h3>3. Polimorfismo</h3>
                     <p>Permite que diferentes clases respondan de manera distinta al mismo método.</p>
                 </div>
                 <div class="pilar-card">
-                    <h3>4. Abstracción 🧠</h3>
+                    <h3>4. Abstracción</h3>
                     <p>Muestra solo lo esencial del objeto y oculta los detalles complejos internos.</p>
                 </div>
             </div>
@@ -126,7 +126,7 @@ class Estudiante {
 
         <!-- SECCIÓN 4: EJEMPLO PRÁCTICO POO -->
         <section id="ejemplo-practico">
-            <h2>💻 Ejemplo Práctico en PHP</h2>
+            <h2>Ejemplo Práctico en PHP</h2>
             <p>Demostración simple de una clase PHP con sus atributos, constructor y métodos:</p>
 
             <?php
@@ -180,7 +180,7 @@ class Estudiante {
 
         <!-- SECCIÓN 5: CUESTIONARIO CON TU FORMULARIO ORIGINAL -->
         <section id="practica">
-            <h2>📝 Cuestionario de Programación Orientada a Objetos</h2>
+            <h2>Cuestionario de Programación Orientada a Objetos</h2>
             <p>Selecciona una respuesta para cada pregunta. Cada respuesta correcta vale <strong>2 puntos</strong>; al finalizar verás tu puntuación sobre 10.</p>
 
             <?php

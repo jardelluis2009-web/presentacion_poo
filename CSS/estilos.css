@@ -1,8 +1,17 @@
 :root {
-    --success: #155724;
-    --danger: #721c24;
-    --primary: #0056b3;
-    --accent: #856404;
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --surface-soft: #eef4ff;
+    --primary: #2b6cf6;
+    --primary-dark: #1a4ec7;
+    --secondary: #6d4ae8;
+    --accent: #11b5a3;
+    --text: #1f2937;
+    --muted: #5b6475;
+    --success: #1c8c5c;
+    --danger: #c94848;
+    --border: #dfe8f7;
+    --shadow: 0 14px 28px rgba(31, 41, 55, 0.12);
 }
 
 * {
@@ -13,56 +22,74 @@
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #333;
+    background: linear-gradient(180deg, #edf3ff 0%, #f9fbff 100%);
+    color: var(--text);
+    line-height: 1.6;
 }
 
 header {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
     color: white;
-    padding: 20px 0;
+    padding: 30px 20px;
     text-align: center;
+    box-shadow: 0 8px 18px rgba(38, 63, 122, 0.2);
 }
 
 header h1 {
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-size: clamp(2rem, 3vw, 3rem);
+    letter-spacing: 0.5px;
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
 }
 
 nav {
-    background: #004494;
+    background: rgba(22, 35, 65, 0.95);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 6px 18px rgba(17, 24, 39, 0.15);
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 18px 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s;
+    font-weight: 700;
+    font-size: 0.96rem;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    color: #bfe7ff;
+    transform: translateY(-1px);
+}
+
+main {
+    padding: 20px 15px 40px;
 }
 
 section {
-    padding: 40px 30px;
+    padding: 36px 30px;
     max-width: 1100px;
-    margin: 30px auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 28px auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
     text-align: left;
 }
 
@@ -71,134 +98,175 @@ section {
 }
 
 h2 {
-    color: #0056b3;
-    border-bottom: 2px solid #0056b3;
-    padding-bottom: 10px;
+    color: var(--primary-dark);
+    border-bottom: 2px solid rgba(43, 108, 246, 0.18);
+    padding-bottom: 12px;
     margin-bottom: 20px;
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
 }
 
 h3 {
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    color: var(--text);
+    margin-top: 22px;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
 }
 
 p, li {
     line-height: 1.7;
     margin-bottom: 15px;
+    color: var(--muted);
 }
 
 ul {
-    margin-left: 20px;
+    margin-left: 22px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 18px 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin-top: 12px;
+    border: 1px solid #1e293b;
+}
+
+code {
+    background: rgba(43, 108, 246, 0.08);
+    color: var(--primary-dark);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.95em;
 }
 
 .pilar-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
 .pilar-card {
-    background: #e9ecef;
-    padding: 15px;
-    border-radius: 5px;
-    border-left: 4px solid #0056b3;
+    background: linear-gradient(180deg, var(--surface-soft) 0%, #f5f9ff 100%);
+    padding: 20px;
+    border-radius: 14px;
+    border-left: 5px solid var(--accent);
+    box-shadow: 0 10px 18px rgba(34, 197, 94, 0.05);
+}
+
+.pilar-card h3 {
+    margin-top: 0;
+    color: var(--primary-dark);
 }
 
 .form-container {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    max-width: 500px;
+    background: linear-gradient(180deg, #f9fbff 0%, #f2f6ff 100%);
+    padding: 22px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    max-width: 620px;
     margin: 0 auto;
     text-align: left;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
 label {
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--text);
 }
 
 input[type="text"], input[type="number"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
     font-size: 16px;
+    background: white;
 }
 
 button {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: white;
-    padding: 12px;
+    padding: 14px 18px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 16px rgba(43, 108, 246, 0.22);
 }
 
 button:hover {
-    background-color: #004494;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 18px rgba(43, 108, 246, 0.28);
 }
 
 .resultado {
-    background: #d4edda;
-    color: #155724;
-    padding: 15px;
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
+    background: linear-gradient(180deg, #eafff5 0%, #dffaf0 100%);
+    color: var(--success);
+    padding: 16px 18px;
+    border: 1px solid rgba(28, 140, 92, 0.2);
+    border-radius: 12px;
     margin-top: 20px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .quiz-container {
-    background: #fff3cd;
+    background: linear-gradient(180deg, #fffdf6 0%, #fffaf0 100%);
     padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ffeeba;
+    border-radius: 16px;
+    border: 1px solid #f1e3b3;
     text-align: left;
 }
 
 .pregunta-bloque {
     border: 0;
-    border-bottom: 1px solid #ffeeba;
+    border-bottom: 1px solid #eadaba;
     padding: 0 0 15px;
+    margin-bottom: 15px;
 }
 
 .pregunta-bloque legend {
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 10px;
+    color: var(--text);
 }
 
 .pregunta-bloque label {
     display: block;
-    font-weight: normal;
+    font-weight: 500;
     margin: 8px 0;
     cursor: pointer;
+    color: var(--muted);
 }
 
 .pregunta-bloque input[type="radio"] {
     margin-right: 8px;
+    accent-color: var(--primary);
 }
 
 .resultado-cuestionario {
     margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
     background: white;
 }
 
 .resultado-cuestionario h3 {
     margin-top: 0;
+    color: var(--primary-dark);
 }
 
 .resultado-cuestionario p {
@@ -207,34 +275,29 @@ button:hover {
 
 .respuesta-correcta {
     color: var(--success);
+    font-weight: 600;
 }
 
 .respuesta-incorrecta {
     color: var(--danger);
+    font-weight: 600;
 }
 
 footer {
     text-align: center;
-    padding: 30px;
-    background: #222;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
     color: white;
     margin-top: 40px;
 }
 
-/* Estilos adicionales para separar mejor las preguntas del quiz */
-.pregunta-bloque {
-    margin-bottom: 15px;
-}
-
-.pregunta-bloque label {
-    display: block;
-    font-weight: normal;
-    margin-top: 5px;
-    cursor: pointer;
+footer h3 {
+    color: white;
+    margin-top: 0;
 }
 
 hr {
     border: 0;
-    border-top: 1px solid #ffeeba;
+    border-top: 1px solid #dfe8f7;
     margin: 15px 0;
 }
